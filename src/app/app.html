@@ -1,0 +1,254 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- src/app/app.component.html -->
+<!-- src/app/app.component.html -->
+
+  <!-- Navigation bar styled with Tailwind CSS -->
+<!-- src/app/app.component.html -->
+<div class="container mx-auto p-4 font-inter">
+  <!-- Use a Mat Toolbar for the header, which is common for Material navigation -->
+  <mat-toolbar class="bg-blue-600 text-white rounded-lg shadow-md mb-8 flex justify-between items-center px-6 py-3">
+    <span class="text-xl font-bold">My App</span>
+
+    <!-- Button to trigger the Mat Menu -->
+    <button mat-icon-button [matMenuTriggerFor]="appMenu" aria-label="Open navigation menu">
+      <mat-icon>menu</mat-icon> <!-- Using a Material Icon for the menu button -->
+    </button>
+
+    <!-- The Mat Menu itself -->
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item routerLink="/home" routerLinkActive="bg-blue-100 text-blue-800">
+        <mat-icon>home</mat-icon> <!-- Optional: Add icons to menu items -->
+        <span>Home</span>
+      </button>
+      <button mat-menu-item routerLink="/about" routerLinkActive="bg-blue-100 text-blue-800">
+        <mat-icon>info</mat-icon>
+        <span>About</span>
+      </button>
+      <button mat-menu-item routerLink="/services" routerLinkActive="bg-blue-100 text-blue-800">
+        <mat-icon>build</mat-icon>
+        <span>Services</span>
+      </button>
+      <button mat-menu-item routerLink="/products" routerLinkActive="bg-blue-100 text-blue-800">
+        <mat-icon>shopping_bag</mat-icon>
+        <span>Products</span>
+      </button>
+      <button mat-menu-item routerLink="/tree" routerLinkActive="bg-blue-100 text-blue-800">
+        <mat-icon>account_tree</mat-icon>
+        <span>Tree</span>
+      </button>
+      <button mat-menu-item routerLink="/contact" routerLinkActive="bg-blue-100 text-blue-800">
+        <mat-icon>call</mat-icon>
+        <span>Contact</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+
+
+</div>
+
+<!-- Script to load Tailwind CSS for utility-first styling -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+  <section> <router-outlet></router-outlet></section>
+
+
+
+<!-- Script to load Tailwind CSS for styling. This should typically be in index.html for production,
+     but for quick development, including it here works. -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+<style>
+  :host {
+    --bright-blue: oklch(51.01% 0.274 263.83);
+    --electric-violet: oklch(53.18% 0.28 296.97);
+    --french-violet: oklch(47.66% 0.246 305.88);
+    --vivid-pink: oklch(69.02% 0.277 332.77);
+    --hot-red: oklch(61.42% 0.238 15.34);
+    --orange-red: oklch(63.32% 0.24 31.68);
+
+    --gray-900: oklch(19.37% 0.006 300.98);
+    --gray-700: oklch(36.98% 0.014 302.71);
+    --gray-400: oklch(70.9% 0.015 304.04);
+
+    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
+      180deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
+      90deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --pill-accent: var(--bright-blue);
+
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    font-size: 3.125rem;
+    color: var(--gray-900);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+  }
+
+  p {
+    margin: 0;
+    color: var(--gray-700);
+  }
+
+  main {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+  }
+
+  .angular-logo {
+    max-width: 9.2rem;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+
+  .content h1 {
+    margin-top: 1.75rem;
+  }
+
+  .content p {
+    margin-top: 1.5rem;
+  }
+
+  .divider {
+    width: 1px;
+    background: var(--red-to-pink-to-purple-vertical-gradient);
+    margin-inline: 0.5rem;
+  }
+
+  .pill-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .pill {
+    display: flex;
+    align-items: center;
+    --pill-accent: var(--bright-blue);
+    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
+    color: var(--pill-accent);
+    padding-inline: 0.75rem;
+    padding-block: 0.375rem;
+    border-radius: 2.75rem;
+    border: 0;
+    transition: background 0.3s ease;
+    font-family: sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4rem;
+    letter-spacing: -0.00875rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .pill:hover {
+    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
+  }
+
+  .pill-group .pill:nth-child(6n + 1) {
+    --pill-accent: var(--bright-blue);
+  }
+  .pill-group .pill:nth-child(6n + 2) {
+    --pill-accent: var(--electric-violet);
+  }
+  .pill-group .pill:nth-child(6n + 3) {
+    --pill-accent: var(--french-violet);
+  }
+
+  .pill-group .pill:nth-child(6n + 4),
+  .pill-group .pill:nth-child(6n + 5),
+  .pill-group .pill:nth-child(6n + 6) {
+    --pill-accent: var(--hot-red);
+  }
+
+  .pill-group svg {
+    margin-inline-start: 0.25rem;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.73rem;
+    margin-top: 1.5rem;
+  }
+
+  .social-links path {
+    transition: fill 0.3s ease;
+    fill: var(--gray-400);
+  }
+
+  .social-links a:hover svg path {
+    fill: var(--gray-900);
+  }
+
+  @media screen and (max-width: 650px) {
+    .content {
+      flex-direction: column;
+      width: max-content;
+    }
+
+    .divider {
+      height: 1px;
+      width: 100%;
+      background: var(--red-to-pink-to-purple-horizontal-gradient);
+      margin-block: 1.5rem;
+    }
+  }
+</style>
+
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+

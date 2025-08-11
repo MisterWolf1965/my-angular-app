@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; background: #6F8EAD}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+color: white;
+}
+
+
+section{
+  width: 80%;
+  border: 1px white solid;
+  margin: 100px 10% 100px 10%;
+  padding: 30px;
+}
+.CARDcontainer{
+  display: flex;
+  color: #6F8EAD;
+
+}
+.CARDcontainer .mat-mdc-card{
+margin-left: 20px;
+
+}
+.CARDcontainer img{
+  width: 100%;
+}
+.mat-grid-list{
+  color: #333;
+}
+
