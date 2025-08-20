@@ -29,7 +29,7 @@ const transporter = nodemailer.createTransport({
   secure: false,
   auth: {
     user: 'lupoin2023@icloud.com', // ✅ Your iCloud email address
-    pass: 'your_app_specific_password' // ⚠️ Add your app-specific password here
+    pass: 'bexc-mnyb-mwlw-ggca' // ⚠️ Add your app-specific password here
   }
 });
 
